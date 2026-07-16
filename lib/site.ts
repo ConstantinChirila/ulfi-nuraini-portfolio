@@ -5,6 +5,8 @@
 export const site = {
   name: 'Ulfi Nuraini',
   role: 'Cybersecurity Consultant',
+  // Production origin — used by metadataBase, sitemap, robots and JSON-LD.
+  url: 'https://ulfi.uk',
   // Canonical address (server-side reference only). It is deliberately NOT
   // rendered into any page's HTML — the visible/clickable email is emitted by
   // components/EmailLink.tsx, which decodes an obfuscated copy in the browser

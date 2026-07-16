@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'CV · Ulfi Nuraini · Cybersecurity Consultant',
+  title: 'CV',
   description:
     'Curriculum vitae for Ulfi Nuraini — cybersecurity consultant: experience, education, certifications and skills across cloud security, security architecture and cyber risk advisory.',
+  alternates: { canonical: '/cv' },
 };
 
 const experience = [

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/lib/site';
 import EmailLink from '@/components/EmailLink';
@@ -10,12 +11,26 @@ export default function Home() {
         <span className="splotch s1" />
         <span className="splotch s2" />
         <div className="hero-flora">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="plate-img" src="/plates/hero-flora-right.webp" alt="" />
+          <Image
+            className="plate-img"
+            src="/plates/hero-flora-right.webp"
+            alt=""
+            width={933}
+            height={1400}
+            priority
+            sizes="(max-width:760px) 45vw, 560px"
+          />
         </div>
         <div className="hero-flora-l">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="plate-img" src="/plates/hero-flora-left.webp" alt="" />
+          <Image
+            className="plate-img"
+            src="/plates/hero-flora-left.webp"
+            alt=""
+            width={933}
+            height={1400}
+            priority
+            sizes="(max-width:760px) 38vw, 440px"
+          />
         </div>
         <div className="wrap">
           <div className="hero-inner">
@@ -64,8 +79,13 @@ export default function Home() {
             <span className="plate-no">Plate I</span>
             <div className="plate-head">
               <div className="crest">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/plates/flourish-disciplines.webp" alt="" />
+                <Image
+                  src="/plates/flourish-disciplines.webp"
+                  alt=""
+                  width={900}
+                  height={600}
+                  sizes="(max-width:760px) 82vw, 480px"
+                />
               </div>
               <div className="head-text">
                 <h2>Three disciplines, one consultant</h2>
@@ -75,12 +95,14 @@ export default function Home() {
             <div className="bearings">
               <div className="bearing">
                 <div className="emblem">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="plate-img"
                     style={{ height: 96, width: 'auto' }}
                     src="/plates/emblem-root.webp"
                     alt=""
+                    width={700}
+                    height={467}
+                    sizes="150px"
                   />
                 </div>
                 <h3>Cloud &amp; OT security</h3>
@@ -92,12 +114,14 @@ export default function Home() {
               </div>
               <div className="bearing">
                 <div className="emblem">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="plate-img"
                     style={{ height: 96, width: 'auto' }}
                     src="/plates/emblem-stem.webp"
                     alt=""
+                    width={400}
+                    height={500}
+                    sizes="150px"
                   />
                 </div>
                 <h3>Security architecture</h3>
@@ -109,12 +133,14 @@ export default function Home() {
               </div>
               <div className="bearing">
                 <div className="emblem">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="plate-img"
                     style={{ height: 96, width: 'auto' }}
                     src="/plates/emblem-bloom.webp"
                     alt=""
+                    width={500}
+                    height={500}
+                    sizes="150px"
                   />
                 </div>
                 <h3>Cyber risk advisory</h3>
@@ -137,8 +163,13 @@ export default function Home() {
             <span className="plate-no">Plate II</span>
             <div className="plate-head">
               <div className="crest">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/plates/flourish-specimens.webp" alt="" />
+                <Image
+                  src="/plates/flourish-specimens.webp"
+                  alt=""
+                  width={900}
+                  height={600}
+                  sizes="(max-width:760px) 82vw, 480px"
+                />
               </div>
               <div className="head-text">
                 <h2>Selected engagements</h2>
@@ -149,11 +180,13 @@ export default function Home() {
             <Link className="specimen" href="/cv">
               <div className="fig">
                 <div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="plate-img"
                     src="/plates/specimen-01-thistle.webp"
-                    alt="Botanical plate illustration"
+                    alt=""
+                    width={601}
+                    height={900}
+                    sizes="(max-width:860px) 260px, 240px"
                   />
                 </div>
                 <p className="cap">Fig. 1 · 2025 – present</p>
@@ -173,11 +206,13 @@ export default function Home() {
             <Link className="specimen" href="/cv">
               <div className="fig">
                 <div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="plate-img"
                     src="/plates/specimen-02-sweetpea.webp"
-                    alt="Botanical plate illustration"
+                    alt=""
+                    width={601}
+                    height={900}
+                    sizes="(max-width:860px) 260px, 240px"
                   />
                 </div>
                 <p className="cap">Fig. 2 · 2024</p>
@@ -197,11 +232,13 @@ export default function Home() {
             <Link className="specimen" href="/cv">
               <div className="fig">
                 <div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="plate-img"
                     src="/plates/specimen-03-iris.webp"
-                    alt="Botanical plate illustration"
+                    alt=""
+                    width={601}
+                    height={900}
+                    sizes="(max-width:860px) 260px, 240px"
                   />
                 </div>
                 <p className="cap">Fig. 3 · 2023</p>
@@ -221,11 +258,13 @@ export default function Home() {
             <Link className="specimen" href="/cv">
               <div className="fig">
                 <div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="plate-img"
                     src="/plates/specimen-04-honeysuckle.webp"
-                    alt="Botanical plate illustration"
+                    alt=""
+                    width={600}
+                    height={900}
+                    sizes="(max-width:860px) 260px, 240px"
                   />
                 </div>
                 <p className="cap">Fig. 4 · 2022 – 2023</p>
@@ -267,8 +306,13 @@ export default function Home() {
             <span className="plate-no">Plate III</span>
             <div className="plate-head">
               <div className="crest">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/plates/flourish-method.webp" alt="" />
+                <Image
+                  src="/plates/flourish-method.webp"
+                  alt=""
+                  width={1300}
+                  height={650}
+                  sizes="(max-width:760px) 82vw, 480px"
+                />
               </div>
               <div className="head-text">
                 <h2>The method</h2>
@@ -319,16 +363,27 @@ export default function Home() {
         <span className="splotch c2" />
         <div className="wrap reveal">
           <div className="contact-flora">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="plate-img" src="/plates/contact-garland.webp" alt="" />
+            <Image
+              className="plate-img"
+              src="/plates/contact-garland.webp"
+              alt=""
+              width={1300}
+              height={462}
+              sizes="(max-width:640px) 96vw, 540px"
+            />
           </div>
           <h2>
             Something worth <em>securing?</em>
           </h2>
           <p className="caps avail">Available for security consulting &amp; contract engagements</p>
           <div className="contact-letter">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/plates/flourish-contact.webp" alt="" />
+            <Image
+              src="/plates/flourish-contact.webp"
+              alt=""
+              width={900}
+              height={600}
+              sizes="260px"
+            />
           </div>
           <div className="acts">
             <EmailLink className="btn solid" />

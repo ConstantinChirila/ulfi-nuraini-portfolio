@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About · Ulfi Nuraini · Cybersecurity Consultant',
+  title: 'About',
   description:
     'About Ulfi Nuraini — a UK-based cybersecurity consultant with six years of experience across cloud security, security architecture and cyber risk advisory. CISSP certified.',
+  alternates: { canonical: '/about' },
 };
 
 export default function About() {
@@ -12,6 +14,7 @@ export default function About() {
     <>
       {/* ---- THE CONSULTANT ---- */}
       <section id="about" style={{ paddingTop: 84 }}>
+        <h1 className="sr-only">About Ulfi Nuraini — Cybersecurity Consultant</h1>
         <span className="splotch" />
         <div className="wrap">
           <div className="plate-frame reveal">
@@ -26,8 +29,14 @@ export default function About() {
             </div>
             <div className="about-grid">
               <div className="portrait plate-slot">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/plates/portrait.webp" alt="Illustrated portrait of Ulfi Nuraini" />
+                <Image
+                  src="/plates/portrait.webp"
+                  alt="Illustrated portrait of Ulfi Nuraini"
+                  width={1448}
+                  height={1086}
+                  priority
+                  sizes="(max-width:860px) 300px, 320px"
+                />
                 <p className="cap">Ulfi Nuraini · observed from life</p>
               </div>
               <div className="about-text">

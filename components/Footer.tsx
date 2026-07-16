@@ -1,4 +1,5 @@
 import { site } from '@/lib/site';
+import EmailLink from '@/components/EmailLink';
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           <a href={site.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href={`mailto:${site.email}`}>Email</a>
+          <EmailLink label="Email" />
           <a href="/cv">CV</a>
         </div>
         <div className="fc">© 2019–2026 Ulfi Nuraini · Cybersecurity Consultant · United Kingdom</div>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { site } from '@/lib/site';
+import EmailLink from '@/components/EmailLink';
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
               <svg width="26" height="18" viewBox="0 0 26 18" fill="none">
                 <path
                   d="M13 16 C13 10, 9 6, 3 5 C8 3, 12 6, 13 10 C14 6, 18 3, 23 5 C17 6, 13 10, 13 16 Z"
-                  stroke="#2E4229"
+                  stroke="#43293C"
                   strokeWidth="1.1"
                 />
               </svg>
@@ -46,9 +47,7 @@ export default function Home() {
               United Kingdom
             </p>
             <div className="acts">
-              <Link href="#contact" className="btn solid">
-                Contact me
-              </Link>
+              <EmailLink className="btn solid" />
               <Link href="/cv" className="btn ghost">
                 View CV
               </Link>
@@ -332,9 +331,7 @@ export default function Home() {
             <img src="/plates/flourish-contact.webp" alt="" />
           </div>
           <div className="acts">
-            <a href={`mailto:${site.email}`} className="btn solid">
-              {site.email}
-            </a>
+            <EmailLink className="btn solid" />
             <a
               href={site.linkedin}
               target="_blank"
@@ -343,65 +340,6 @@ export default function Home() {
             >
               Connect on LinkedIn
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ---- PLATE IV · ABOUT ---- */}
-      <section id="about">
-        <span className="splotch" />
-        <div className="wrap">
-          <div className="plate-frame reveal">
-            <span className="plate-no">Plate IV</span>
-            <div className="plate-head solo">
-              <div className="head-text">
-                <h2>The consultant</h2>
-                <p className="latin">
-                  Ulfi Nuraini · cybersecurity consultant · based in the United Kingdom
-                </p>
-              </div>
-            </div>
-            <div className="about-grid">
-              <div className="portrait plate-slot">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/plates/portrait.webp" alt="Illustrated portrait of Ulfi Nuraini" />
-                <p className="cap">Ulfi Nuraini · observed from life</p>
-              </div>
-              <div className="about-text">
-                <p>
-                  <b>
-                    I&apos;m Ulfi, a cybersecurity consultant with six years of experience across
-                    cloud security, security architecture and cyber risk advisory.
-                  </b>{' '}
-                  I work with both business and technical teams to help deliver secure solutions,
-                  balancing security, operational resilience and business objectives.
-                </p>
-                <p>
-                  My work spans strategic transformation programmes in the UK energy sector —
-                  supporting the secure delivery of cloud, digital and operational technology (OT)
-                  solutions. I hold the CISSP alongside the Microsoft Cybersecurity Architect Expert
-                  certification and a broad range of Azure security credentials.
-                </p>
-                <div className="values">
-                  <div>
-                    <b>Security that enables</b>Protection that supports the business, rather than
-                    standing in its way.
-                  </div>
-                  <div>
-                    <b>Pragmatic &amp; risk-based</b>Recommendations proportionate to the real risk,
-                    not the theoretical one.
-                  </div>
-                  <div>
-                    <b>Architecture first</b>Security requirements defined and designed in from the
-                    start.
-                  </div>
-                  <div>
-                    <b>Across the lifecycle</b>From requirements through assurance to formal risk
-                    acceptance.
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -14,7 +14,7 @@ export default function Nav() {
           <Link href="/#bearings">Expertise</Link>
           <Link href="/#work">Experience</Link>
           <Link href="/#process">Method</Link>
-          <Link href="/#about">About</Link>
+          <Link href="/about">About</Link>
           <Link href="/cv">CV</Link>
         </div>
         <Link href="/#contact" className="navcta">

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -149,7 +148,6 @@ export default function CV() {
       {/* ---- CV HERO ---- */}
       <header className="cv-hero">
         <span className="splotch s1" />
-        <span className="splotch s2" />
         <div className="wrap">
           <div className="cv-hero-inner">
             <p className="caps est">Curriculum Vitae</p>
@@ -164,14 +162,6 @@ export default function CV() {
               <span>{site.location}</span>
               <span>CISSP · ISC2</span>
               <span>Microsoft Cybersecurity Architect Expert</span>
-            </div>
-            <div className="acts">
-              <a href={`mailto:${site.email}`} className="btn solid">
-                Contact me
-              </a>
-              <Link href="/" className="btn ghost">
-                Back to portfolio
-              </Link>
             </div>
           </div>
         </div>
@@ -198,7 +188,7 @@ export default function CV() {
                 </div>
                 <p className="org">{job.org}</p>
                 <p className="loc">{job.loc}</p>
-                {job.summary && <p className="obs" style={{ marginTop: 14, fontSize: 19, color: '#48513c' }}>{job.summary}</p>}
+                {job.summary && <p className="obs" style={{ marginTop: 14, fontSize: 19, color: '#5C4A56' }}>{job.summary}</p>}
                 <ul>
                   {job.bullets.map((b, i) => (
                     <li key={i}>{b}</li>
@@ -224,7 +214,6 @@ export default function CV() {
             <div className="plate-head">
               <div className="head-text">
                 <h2>Core skills</h2>
-                <p className="latin">the working toolkit</p>
               </div>
             </div>
             {skillGroups.map((group) => (

@@ -2,9 +2,9 @@
   color-scheme:only light;
   --paper:#F4EFE0;
   --paper-deep:#EDE6D2;
-  --ink:#2E4229;          /* deep botanical green */
-  --ink-soft:#5E6E52;
-  --leaf:#4A6B3A;
+  --ink:#43293C;          /* deep plum */
+  --ink-soft:#6E5A66;     /* muted mauve */
+  --leaf:#B0456B;         /* rose accent (kept var name for compatibility) */
   --rule:#C9C2A6;
   /* the splotches */
   --rose:#C1607A;
@@ -71,7 +71,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .hero .flourish svg{flex:none}
 .hero h1{font-family:var(--display);font-weight:500;font-size:clamp(48px,6.6vw,92px);line-height:1.04;letter-spacing:-.01em}
 .hero h1 em{font-style:italic;font-weight:400;color:var(--leaf)}
-.hero .sub{margin:30px auto 0;max-width:52ch;font-size:23px;color:#48513c}
+.hero .sub{margin:30px auto 0;max-width:52ch;font-size:23px;color:#5C4A56}
 .hero .sub b{font-weight:500;color:var(--ink)}
 .hero .binomial{margin-top:20px}
 .hero .acts{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:40px}
@@ -101,7 +101,7 @@ section{padding:60px 0;position:relative;overflow:hidden}
 .bearing{text-align:center}
 .bearing .emblem{height:96px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .bearing h3{font-family:var(--display);font-weight:600;font-size:31px;margin-bottom:10px}
-.bearing p{font-size:20px;color:#48513c;max-width:34ch;margin:0 auto}
+.bearing p{font-size:20px;color:#5C4A56;max-width:34ch;margin:0 auto}
 .bearing .latin{display:block;font-size:17px;margin-top:12px}
 @media(max-width:860px){.bearings{grid-template-columns:1fr;gap:52px}}
 
@@ -114,7 +114,7 @@ section{padding:60px 0;position:relative;overflow:hidden}
 .specimen .fig .cap{text-align:center;margin-top:8px;font-family:var(--display);font-style:italic;font-size:17px;color:var(--ink-soft)}
 .specimen h3{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.4vw,42px);line-height:1.05}
 .specimen .habitat{margin-top:6px}
-.specimen .obs{margin-top:14px;font-size:20px;color:#48513c;max-width:52ch}
+.specimen .obs{margin-top:14px;font-size:20px;color:#5C4A56;max-width:52ch}
 .specimen .obs .ph{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:2px}
 .specimen .arw{font-family:var(--display);font-size:30px;color:var(--ink-soft);transition:transform .25s,color .25s}
 .specimen:hover .arw{transform:translateX(6px);color:var(--leaf)}
@@ -129,7 +129,7 @@ section{padding:60px 0;position:relative;overflow:hidden}
 .season{text-align:center;position:relative}
 .season .n{font-family:var(--display);font-style:italic;font-size:23px;color:var(--leaf);display:block;margin-bottom:12px}
 .season h4{font-family:var(--display);font-weight:600;font-size:28px;margin-bottom:8px}
-.season p{font-size:19px;color:#48513c}
+.season p{font-size:19px;color:#5C4A56}
 @media(max-width:860px){.seasons{grid-template-columns:1fr 1fr;gap:36px 28px}}
 @media(max-width:520px){.seasons{grid-template-columns:1fr}}
 
@@ -152,10 +152,11 @@ section{padding:60px 0;position:relative;overflow:hidden}
 .about-grid{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:start}
 .portrait img{width:100%;height:auto;display:block}
 .portrait .cap{text-align:center;margin-top:12px;font-family:var(--display);font-style:italic;font-size:17px;color:var(--ink-soft)}
-.about-text p{font-size:20px;color:#48513c;margin-bottom:20px;max-width:62ch}
+.about-text p{font-size:20px;color:#5C4A56;margin-bottom:20px;max-width:62ch}
 .about-text p b{font-weight:500;color:var(--ink)}
+.about-text .acts{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .values{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;margin:20px 0}
-.values div{font-size:17px;color:#48513c;line-height:1.5}
+.values div{font-size:17px;color:#5C4A56;line-height:1.5}
 .values b{font-family:var(--display);font-style:italic;font-weight:600;font-size:21px;color:var(--ink);display:block;margin-bottom:3px}
 @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}.portrait{max-width:300px;margin:0 auto}.values{grid-template-columns:1fr}}
 
@@ -173,12 +174,11 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 
 /* ============ CV PAGE ============ */
 .cv-hero{position:relative;text-align:center;padding:60px 0 20px;overflow:hidden}
-.cv-hero .splotch.s1{width:380px;height:300px;background:var(--periwinkle);top:60px;left:5%}
-.cv-hero .splotch.s2{width:340px;height:300px;background:var(--ochre);bottom:0;right:6%}
+.cv-hero .splotch.s1{width:min(680px,78vw);height:400px;background:var(--rose);top:30px;left:50%;transform:translateX(-50%);opacity:.2}
 .cv-hero-inner{position:relative;z-index:2;max-width:760px;margin:0 auto}
 .cv-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(44px,6vw,78px);line-height:1.05}
 .cv-hero h1 em{font-style:italic;font-weight:400;color:var(--leaf)}
-.cv-hero .sub{margin:22px auto 0;max-width:56ch;font-size:21px;color:#48513c}
+.cv-hero .sub{margin:22px auto 0;max-width:56ch;font-size:21px;color:#5C4A56}
 .cv-hero .acts{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 
 .cv-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:22px}
@@ -194,7 +194,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .role .org{font-family:var(--display);font-style:italic;font-size:21px;color:var(--ink-soft);margin-top:4px}
 .role .loc{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
 .role ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
-.role ul li{position:relative;padding-left:26px;font-size:19px;color:#48513c;max-width:76ch}
+.role ul li{position:relative;padding-left:26px;font-size:19px;color:#5C4A56;max-width:76ch}
 .role ul li::before{content:"";position:absolute;left:4px;top:14px;width:7px;height:7px;background:var(--leaf);border-radius:48% 52% 61% 39%/44% 57% 43% 56%}
 .role .tags{display:flex;flex-wrap:wrap;gap:8px 12px;margin-top:16px}
 .role .tags span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-soft);border:1px solid var(--rule);padding:4px 10px;background:rgba(255,255,255,.35)}
@@ -205,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .cv-item h4{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.15}
 .cv-item .meta{font-size:16px;color:var(--ink-soft);margin-top:4px}
 .cv-item .meta em{font-style:italic}
-.cv-item p{font-size:18px;color:#48513c;margin-top:6px;max-width:52ch}
+.cv-item p{font-size:18px;color:#5C4A56;margin-top:6px;max-width:52ch}
 
 /* certification grid */
 .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px}
@@ -216,8 +216,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 .cert .date{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--ink-soft);white-space:nowrap}
 
 /* skills cloud */
-.skills-cloud{display:flex;flex-wrap:wrap;gap:12px 14px;justify-content:center}
-.skills-cloud span{font-family:var(--display);font-size:clamp(18px,2vw,26px);color:var(--ink);border:1px solid var(--rule);padding:8px 18px;background:rgba(255,255,255,.35);transition:border-color .25s,color .25s}
+.skills-cloud{display:flex;flex-wrap:wrap;gap:8px 8px;justify-content:center}
+.skills-cloud span{font-family:var(--body);font-size:13px;letter-spacing:.02em;color:var(--ink);border:1px solid var(--rule);padding:4px 11px;background:rgba(255,255,255,.35);transition:border-color .25s,color .25s}
 .skills-cloud span:hover{border-color:var(--ink);color:var(--leaf)}
 
 .skill-group{margin-bottom:26px}

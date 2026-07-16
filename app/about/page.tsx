@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'About Ulfi Nuraini — a UK-based cybersecurity consultant with six years of experience across cloud security, security architecture and cyber risk advisory. CISSP certified.',
+    'About Ulfi Nuraini, a UK-based cybersecurity consultant with six years of experience across cloud security, security architecture and cyber risk advisory. CISSP certified.',
   alternates: { canonical: '/about' },
 };
 
@@ -14,7 +14,7 @@ export default function About() {
     <>
       {/* ---- THE CONSULTANT ---- */}
       <section id="about" style={{ paddingTop: 84 }}>
-        <h1 className="sr-only">About Ulfi Nuraini — Cybersecurity Consultant</h1>
+        <h1 className="sr-only">About Ulfi Nuraini, Cybersecurity Consultant</h1>
         <span className="splotch" />
         <div className="wrap">
           <div className="plate-frame reveal">
@@ -49,7 +49,7 @@ export default function About() {
                   balancing security, operational resilience and business objectives.
                 </p>
                 <p>
-                  My work spans strategic transformation programmes in the UK energy sector —
+                  My work spans strategic transformation programmes in the UK energy sector,
                   supporting the secure delivery of cloud, digital and operational technology (OT)
                   solutions. I hold the CISSP alongside the Microsoft Cybersecurity Architect Expert
                   certification and a broad range of Azure security credentials.

@@ -107,7 +107,7 @@ export default function Home() {
                 </div>
                 <h3>Cloud &amp; OT security</h3>
                 <p>
-                  Securing Azure, SaaS and SCADA / operational technology — from conditional access
+                  Securing Azure, SaaS and SCADA / operational technology, from conditional access
                   and IAM to CIS-hardened, automated cloud estates.
                 </p>
                 <span className="latin">the root system</span>
@@ -127,7 +127,7 @@ export default function Home() {
                 <h3>Security architecture</h3>
                 <p>
                   Defining security requirements, reference architectures and design reviews grounded
-                  in NIST, ISO 27001 and MITRE ATT&amp;CK — security designed in, not bolted on.
+                  in NIST, ISO 27001 and MITRE ATT&amp;CK: security designed in, not bolted on.
                 </p>
                 <span className="latin">the stem &amp; leaves</span>
               </div>
@@ -146,7 +146,7 @@ export default function Home() {
                 <h3>Cyber risk advisory</h3>
                 <p>
                   Pragmatic, risk-based recommendations, assurance reviews and governance that let
-                  the business move — security as an enabler, not a blocker.
+                  the business move: security as an enabler, not a blocker.
                 </p>
                 <span className="latin">the bloom, in service of the business</span>
               </div>
@@ -196,7 +196,7 @@ export default function Home() {
                 <p className="caps habitat">Security Consultant · Energy · OT · Cloud</p>
                 <p className="obs">
                   <span className="ph">In the field</span>Cyber security advisory across UK energy
-                  transformation programmes — security architecture for Azure, SaaS and SCADA
+                  transformation programmes: security architecture for Azure, SaaS and SCADA
                   restoration systems.
                 </p>
               </div>
@@ -332,7 +332,7 @@ export default function Home() {
                 <span className="n">ii. design</span>
                 <h4>Architect</h4>
                 <p>
-                  Define security requirements and design architecture across cloud, digital and OT —
+                  Define security requirements and design architecture across cloud, digital and OT:
                   written down, never a black box.
                 </p>
               </div>

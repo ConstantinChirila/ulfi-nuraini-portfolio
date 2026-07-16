@@ -4,14 +4,14 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'CV',
   description:
-    'Curriculum vitae for Ulfi Nuraini — cybersecurity consultant: experience, education, certifications and skills across cloud security, security architecture and cyber risk advisory.',
+    'Curriculum vitae for Ulfi Nuraini, cybersecurity consultant: experience, education, certifications and skills across cloud security, security architecture and cyber risk advisory.',
   alternates: { canonical: '/cv' },
 };
 
 const experience = [
   {
     role: 'Security Consultant',
-    accent: '— Business Enablement',
+    accent: '· Business Enablement',
     org: 'National Energy System Operator · Full-time',
     when: 'Jan 2025 – Present',
     loc: 'Warwick, England · Hybrid',
@@ -72,7 +72,7 @@ const education = [
   {
     school: 'Microsoft Cloud Engineering Academy',
     detail: 'Cloud Engineering',
-    note: 'NTT Data UK Scholarship for Women in Tech — Microsoft Azure Engineer.',
+    note: 'NTT Data UK Scholarship for Women in Tech: Microsoft Azure Engineer.',
   },
   {
     school: 'CompTIA Secure Infrastructure Specialist (CSIS) Bootcamp',

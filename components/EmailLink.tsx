@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 /**
  * Renders the contact email as a mailto link WITHOUT ever putting the
  * plaintext address (or the string "mailto:") into the server-rendered HTML.
- * Scraper bots that regex the page source therefore find nothing usable — the
+ * Scraper bots that regex the page source therefore find nothing usable: the
  * real address is decoded and assembled in the browser after hydration.
  *
  * `ENCODED` is base64 of the address, then reversed. If Ulfi's address ever
@@ -33,13 +33,13 @@ export default function EmailLink({
     setEmail(decodeEmail());
   }, []);
 
-  // Pre-hydration / no-JS: emit no address and no mailto — nothing to harvest.
+  // Pre-hydration / no-JS: emit no address and no mailto, nothing to harvest.
   if (!email) {
     if (label) {
       return <span className={className}>{label}</span>;
     }
     return (
-      <span className={className} aria-label="Email address — enable JavaScript to reveal">
+      <span className={className} aria-label="Email address (enable JavaScript to reveal)">
         hello&nbsp;[at]&nbsp;ulfi&nbsp;[dot]&nbsp;uk
       </span>
     );

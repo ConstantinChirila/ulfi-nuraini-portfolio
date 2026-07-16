@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description:
-      'Cloud security, security architecture and cyber risk advisory — balancing security, operational resilience and business objectives.',
+      'Cloud security, security architecture and cyber risk advisory, balancing security, operational resilience and business objectives.',
     type: 'website',
     url: site.url,
     siteName: site.name,
@@ -59,11 +59,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description:
-      'Cloud security, security architecture and cyber risk advisory — balancing security, operational resilience and business objectives.',
+      'Cloud security, security architecture and cyber risk advisory, balancing security, operational resilience and business objectives.',
   },
 };
 
-// Person / ProfilePage structured data — high-leverage for a consultant's site.
+// Person / ProfilePage structured data: high-leverage for a consultant's site.
 const personLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',

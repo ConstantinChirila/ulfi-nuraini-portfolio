@@ -8,7 +8,7 @@ import { useEffect } from 'react';
  *
  * This component is mounted once in the root layout, so it does NOT remount on
  * client-side navigation. We therefore re-run the observer setup whenever the
- * pathname changes — otherwise a newly navigated page's `.reveal` elements are
+ * pathname changes, otherwise a newly navigated page's `.reveal` elements are
  * never observed and stay stuck at opacity:0 (a blank screen).
  */
 export default function Reveal() {

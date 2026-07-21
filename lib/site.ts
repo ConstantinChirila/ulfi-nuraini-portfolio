@@ -8,11 +8,11 @@ export const site = {
   // Production origin, used by metadataBase, sitemap, robots and JSON-LD.
   url: 'https://ulfi.uk',
   // Canonical address (server-side reference only). It is deliberately NOT
-  // rendered into any page's HTML: the visible/clickable email is emitted by
-  // components/EmailLink.tsx, which decodes an obfuscated copy in the browser
-  // to keep it away from scraper bots. If this changes, update EmailLink's
-  // ENCODED constant too:  printf '%s' 'new@addr' | base64 | rev
-  email: 'hello@ulfi.uk',
+  // rendered into any page's HTML, and never shipped whole in the JS bundle:
+  // the visible/clickable email is assembled in the browser by
+  // components/EmailLink.tsx from two XOR-masked halves. If this changes, also
+  // regenerate the A/B arrays in EmailLink.tsx (see the note in that file).
+  email: 'ulfinuraini27+contact@gmail.com',
   linkedin: 'https://www.linkedin.com/in/ulfi/',
   location: 'United Kingdom · Hybrid',
 };

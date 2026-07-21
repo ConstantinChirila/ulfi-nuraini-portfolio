@@ -3,20 +3,36 @@
 import { useEffect, useState } from 'react';
 
 /**
- * Renders the contact email as a mailto link WITHOUT ever putting the
- * plaintext address (or the string "mailto:") into the server-rendered HTML.
- * Scraper bots that regex the page source therefore find nothing usable: the
- * real address is decoded and assembled in the browser after hydration.
+ * Renders the contact address as a mailto link without ever exposing something
+ * a bot can trivially harvest — from the HTML OR the JS bundle:
  *
- * `ENCODED` is base64 of the address, then reversed. If Ulfi's address ever
- * changes, regenerate it with:  printf '%s' 'new@addr' | base64 | rev
- * (and keep it in step with `email` in lib/site.ts).
+ *  - The address is split into two halves (local part + domain) stored as
+ *    separate XOR-masked character-code arrays. Neither array on its own
+ *    decodes to a full email, so a "decode every token and regex for an
+ *    address" scan finds nothing.
+ *  - Nothing is base64 (which scanners routinely auto-decode); it's numeric
+ *    arrays behind a XOR key.
+ *  - The "mailto:" scheme is assembled from char codes too, so that literal
+ *    never appears either.
+ *  - The full address exists only transiently in the browser after hydration.
+ *
+ * It's still reversible by anything that executes this JS (unavoidable for a
+ * clickable link) — the goal is defeating automated harvesters, not humans.
+ *
+ * To change the address, regenerate the two arrays:
+ *   node -e 'const K=0x37;const m=s=>console.log([...s].map(c=>c.charCodeAt(0)^K));m("local");m("domain")'
+ * and keep it in step with `email` in lib/site.ts.
  */
-const ENCODED = '==wa15SamxWdA9GbsVGa';
+const K = 0x37;
+const A = [66, 91, 81, 94, 89, 66, 69, 86, 94, 89, 94, 5, 0, 28, 84, 88, 89, 67, 86, 84, 67];
+const B = [80, 90, 86, 94, 91, 25, 84, 88, 90];
 
-function decodeEmail(): string {
-  const b64 = ENCODED.split('').reverse().join('');
-  return atob(b64);
+const reveal = (seq: number[]) => seq.map((n) => String.fromCharCode(n ^ K)).join('');
+
+function compose(): { addr: string; href: string } {
+  const addr = `${reveal(A)}${String.fromCharCode(64)}${reveal(B)}`;
+  const scheme = String.fromCharCode(109, 97, 105, 108, 116, 111, 58); // "mailto:"
+  return { addr, href: scheme + addr };
 }
 
 export default function EmailLink({
@@ -24,30 +40,30 @@ export default function EmailLink({
   label,
 }: {
   className?: string;
-  /** Optional link text. When omitted, the email address itself is shown. */
+  /** Optional link text. When omitted, the address itself is shown. */
   label?: string;
 }) {
-  const [email, setEmail] = useState<string | null>(null);
+  const [data, setData] = useState<{ addr: string; href: string } | null>(null);
 
   useEffect(() => {
-    setEmail(decodeEmail());
+    setData(compose());
   }, []);
 
-  // Pre-hydration / no-JS: emit no address and no mailto, nothing to harvest.
-  if (!email) {
+  // Pre-hydration / no-JS: emit no address and no scheme, nothing to harvest.
+  if (!data) {
     if (label) {
       return <span className={className}>{label}</span>;
     }
     return (
       <span className={className} aria-label="Email address (enable JavaScript to reveal)">
-        hello&nbsp;[at]&nbsp;ulfi&nbsp;[dot]&nbsp;uk
+        contact&nbsp;[at]&nbsp;ulfinuraini27&nbsp;[on]&nbsp;gmail
       </span>
     );
   }
 
   return (
-    <a className={className} href={`mailto:${email}`}>
-      {label ?? email}
+    <a className={className} href={data.href}>
+      {label ?? data.addr}
     </a>
   );
 }

@@ -62,7 +62,7 @@ export default function Home() {
               United Kingdom
             </p>
             <div className="acts">
-              <EmailLink className="btn solid" />
+              <EmailLink className="btn solid" label="Contact me" />
               <Link href="/cv" className="btn ghost">
                 View CV
               </Link>
